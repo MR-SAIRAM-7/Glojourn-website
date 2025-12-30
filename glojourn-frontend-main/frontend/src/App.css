@@ -1,0 +1,78 @@
+/* Glojourn Custom Styles */
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0B132B 0%, #1B264F 50%, #0B132B 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border;
+}
+
+.status-submitted {
+  @apply bg-blue-50 text-blue-700 border-blue-200;
+}
+
+.status-under_review {
+  @apply bg-amber-50 text-amber-700 border-amber-200;
+}
+
+.status-processing {
+  @apply bg-purple-50 text-purple-700 border-purple-200;
+}
+
+.status-approved {
+  @apply bg-emerald-50 text-emerald-700 border-emerald-200;
+}
+
+.status-rejected {
+  @apply bg-rose-50 text-rose-700 border-rose-200;
+}
+
+/* Dashboard sidebar */
+.sidebar-link {
+  @apply flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-primary rounded-sm transition-all duration-200;
+}
+
+.sidebar-link.active {
+  @apply bg-slate-100 text-primary font-medium;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Form inputs */
+.form-input {
+  @apply h-12 bg-slate-50 border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 rounded-sm px-4;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 text-sm font-medium tracking-wide transition-all duration-300 shadow-lg shadow-primary/20 rounded-sm;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border border-slate-200 hover:border-primary px-8 py-3 text-sm font-medium tracking-wide transition-all duration-300 rounded-sm;
+}
+
+/* Timeline styles */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.timeline-item.active::before {
+  background: #0B132B;
+}

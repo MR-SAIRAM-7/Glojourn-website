@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* New Design Config */
+  --primary-navy: #0B132B;
+  --accent-gold: #FFD700;
+  --accent-gold-dim: #D4B200;
+  --highlight-teal: #0B132B;
+  --pure-white: #FFFFFF;
+  --off-white: #F9F9F9;
+  --text-dark: #333333;
+  --text-light: #E0E0E0;
+
+  /* Shadcn/Tailwind Variables (HSL) */
+  --background: 0 0% 100%; /* White */
+  --foreground: 0 0% 20%; /* Charcoal */
+
+  --card: 0 0% 100%; /* White */
+  --card-foreground: 0 0% 20%; /* Charcoal */
+
+  --popover: 0 0% 100%; /* White */
+  --popover-foreground: 0 0% 20%; /* Charcoal */
+
+  --primary: 225 59% 11%; /* Midnight Navy */
+  --primary-foreground: 0 0% 100%; /* White */
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 225 59% 11%; /* Match primary */
+
+  --radius: 0.5rem;
+
+  --font-head: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --transition-speed: 0.4s;
+  --container-width: 1200px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--pure-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Accessibility Utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Reusing existing Tailwind directives for compatibility, but adding custom classes */
+
+@layer components {
+  .container-custom {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary-custom {
+    background-color: var(--accent-gold);
+    color: var(--primary-navy);
+    border: 2px solid var(--accent-gold);
+  }
+
+  .btn-primary-custom:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+  }
+
+  .btn-outline-custom {
+    background-color: transparent;
+    color: var(--pure-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .btn-outline-custom:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+  }
+}
